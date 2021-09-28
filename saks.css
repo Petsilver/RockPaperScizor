@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+    padding: 1cm;
+}
+body{
+    background-color: lightgray;
+    width: 100%;
+}
+
+.selector{
+    text-align: center;
+    
+} 
+.selection{
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.selection:hover{
+color: brown;
+transform: scale(1.1);
+transition: 100ms;
+}
+button{
+   width: 10%;
+   height: 10%; 
+}
+
+img{
+    width: 20%;
+    height: auto;
+    margin-bottom: 5%;
+    margin-left: 20%;
+}
+    
+.results {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.result-selection{
+  color: brown;
+}
+
+.result-selection-winner{
+ color: black;
+ font-size: 1.5rem;
+}
