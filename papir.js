@@ -49,8 +49,8 @@ function incrementScore(scoreSpan) {
 function addSelectionResult(selection, winner) {
     const div = document.createElement("div")
     div.innerText = selection.option    
-    div.classList.add("result-selection")
-    if (winner) div.classList.add("winner")
+    if (winner) div.classList.add("result-selection-winner")
+    else div.classList.add("result-selection") 
     finalColumn.after(div)
 }
 
