@@ -2,6 +2,7 @@ const selectionButton = document.querySelectorAll("[data-selection]")
 const finalColumn = document.querySelector("[data-final-column")
 const dataComputerScore = document.querySelector("[data-computer-score]")
 const yourComputerScore = document.querySelector("[data-your-score]")
+//const scoreCounter = 
 const SELECTIONS = [
     {
         name: "rock",
@@ -44,6 +45,10 @@ function makeSelection(selection) {
 
 function incrementScore(scoreSpan) {
    scoreSpan.innerText = parseInt(scoreSpan.innerText)+1
+   if (yourComputerScore.innerText == 3)
+     console.log("hello world")
+   if (dataComputerScore.innerText == 3)
+     console.log("Goodbye world")
 }
 
 function addSelectionResult(selection, winner) {
