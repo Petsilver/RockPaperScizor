@@ -21,7 +21,7 @@ color: brown;
 transform: scale(1.1);
 transition: 100ms;
 }
-button{
+.selector button{
    width: 10%;
    height: 10%; 
 }
@@ -51,15 +51,30 @@ img{
  font-size: 1.5rem;
 }
 
-.victoryScreen{
-    position: absolute;
+.victoryScreen,.lossScreen{
+    position: absolute;  
+    visibility: hidden;
+}
+
+.victoryScreen, .lossScreen{
     background-color: white;
-    width: 15cm;
-    height: 5cm;
+    height: 30%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-left: 30%;
+    font-size: 30px;
+      
 }
 
- 
+.restart button{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   bottom: 15%;
+   left: 44%;
+}
+
+

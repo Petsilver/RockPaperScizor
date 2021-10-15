@@ -2,7 +2,7 @@ const selectionButton = document.querySelectorAll("[data-selection]")
 const finalColumn = document.querySelector("[data-final-column")
 const dataComputerScore = document.querySelector("[data-computer-score]")
 const yourComputerScore = document.querySelector("[data-your-score]")
-//const scoreCounter = 
+const restartButton = document.querySelectorAll(".reloadPage")
 const SELECTIONS = [
     {
         name: "rock",
@@ -20,9 +20,15 @@ const SELECTIONS = [
         beats: "paper"
     }
 ]
+restartButton.forEach(restartButton => {
+    restartButton.addEventListener("click", (restartPage))
+})
+
+
+
 
 selectionButton.forEach(selectionButton => {
-    selectionButton.addEventListener("click", e => {
+    selectionButton.addEventListener("click", () => {
        const selectionName = selectionButton.dataset.selection
        const selection = SELECTIONS.find(selection => selection.name === selectionName)
        makeSelection(selection)
@@ -45,10 +51,10 @@ function makeSelection(selection) {
 
 function incrementScore(scoreSpan) {
    scoreSpan.innerText = parseInt(scoreSpan.innerText)+1
-   if (yourComputerScore.innerText == 3)
-     console.log("hello world")
-   if (dataComputerScore.innerText == 3)
-     console.log("Goodbye world")
+   if (yourComputerScore.innerText == 1)
+     return youWin()
+   if (dataComputerScore.innerText == 9)
+     return youLose()
 }
 
 function addSelectionResult(selection, winner) {
@@ -59,6 +65,15 @@ function addSelectionResult(selection, winner) {
     finalColumn.after(div)
 }
 
+function youWin(){
+    yourVictoryScreen = document.querySelector('.victoryScreen');
+            yourVictoryScreen.style.visibility = 'visible';
+}
+function youLose(){
+    yourLossScreen = document.querySelector('.lossScreen');
+            yourLossScreen.style.visibility = 'visible';
+}
+    
 function isWinner(selection, opponentSelection){
     return selection.beats === opponentSelection.name
 }
@@ -66,4 +81,10 @@ function isWinner(selection, opponentSelection){
 function randomSelection() {
    const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
    return SELECTIONS[randomIndex]
+}
+
+function restartPage(){
+    
+    console.log("Hello world");
+    location.reload();
 }
