@@ -90,11 +90,11 @@ img{
     text-align: center;
 }
 .startscreen p{
-    width: 30%;
-    position: relative;
-    padding-bottom: 1%;
-    justify-content: center;
-    display: flex;
+   position: relative;
+   text-align: center;
+   width: 20%;
+   left: 40%;
 }
+
 
 
