@@ -3,6 +3,7 @@ const finalColumn = document.querySelector("[data-final-column")
 const dataComputerScore = document.querySelector("[data-computer-score]")
 const yourComputerScore = document.querySelector("[data-your-score]")
 const restartButton = document.querySelectorAll(".reloadPage")
+const readyToPlay = document.querySelector(".gamestart")
 const SELECTIONS = [
     {
         name: "rock",
@@ -24,6 +25,7 @@ restartButton.forEach(restartButton => {
     restartButton.addEventListener("click", (restartPage))
 })
 
+readyToPlay.addEventListener("click", (Saw))
 
 
 
@@ -87,4 +89,10 @@ function restartPage(){
     
     console.log("Hello world");
     location.reload();
+}
+
+function Saw(){
+    console.log("Hello world");
+    doYouWantToPlayAGame = document.querySelector(".startscreen");
+    doYouWantToPlayAGame.style.visibility = "hidden";
 }

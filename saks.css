@@ -77,4 +77,24 @@ img{
    left: 44%;
 }
 
+.startscreen{
+    background-color: white;
+    position: absolute;
+    width: 60%;
+    height: relative;
+    justify-content: center;
+    padding-bottom: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 19%;
+    text-align: center;
+}
+.startscreen p{
+    width: 30%;
+    position: relative;
+    padding-bottom: 1%;
+    justify-content: center;
+    display: flex;
+}
+
 
