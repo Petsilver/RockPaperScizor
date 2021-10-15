@@ -51,9 +51,9 @@ function makeSelection(selection) {
 
 function incrementScore(scoreSpan) {
    scoreSpan.innerText = parseInt(scoreSpan.innerText)+1
-   if (yourComputerScore.innerText == 1)
+   if (yourComputerScore.innerText == 2)
      return youWin()
-   if (dataComputerScore.innerText == 9)
+   if (dataComputerScore.innerText == 2)
      return youLose()
 }
 
