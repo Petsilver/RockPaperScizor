@@ -27,8 +27,6 @@ restartButton.forEach(restartButton => {
 
 readyToPlay.addEventListener("click", (Saw))
 
-
-
 selectionButton.forEach(selectionButton => {
     selectionButton.addEventListener("click", () => {
        const selectionName = selectionButton.dataset.selection
